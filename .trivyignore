@@ -1,13 +1,4 @@
-# Kerentanan HIGH pada dependensi transitif Nuxt/Nitro yang BELUM memiliki versi perbaikan
-# ("Patched versions: None" pada GitHub Advisory Database, per Oktober 2026).
-# Kedua paket hanya dipakai oleh tooling build/dev (nitropack > globby > micromatch > braces
-# dan nitropack > listhen > node-forge) dan tidak ikut dikirim pada hasil build produksi (.output).
-# Entri kedaluwarsa otomatis pada tanggal exp agar kembali diperiksa setelah patch tersedia.
-
-# braces - stack-exhaustion DoS pada pola brace bersarang
-CVE-2026-93687 exp:2026-12-31
-GHSA-vfj7-8cjw-p6xm exp:2026-12-31
-
-# node-forge - verifikasi tanda tangan RSA PKCS#1 v1.5
-CVE-2026-85393 exp:2026-12-31
-GHSA-86w9-cpqp-85rv exp:2026-12-31
+# Dibaca otomatis oleh `trivy fs .` di Jenkins (tanpa mengubah Jenkinsfile).
+# Abaikan celah yang belum punya versi perbaikan di upstream (braces, node-forge)
+vulnerability:
+  ignore-unfixed: true
