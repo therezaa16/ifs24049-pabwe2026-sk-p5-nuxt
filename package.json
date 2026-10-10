@@ -27,7 +27,7 @@
   },
   "overrides": {
     "dompurify": "^3.2.4",
-    "simple-git": "^4.0.2"
+    "@nuxt/devtools": "4.0.0-beta.4"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
